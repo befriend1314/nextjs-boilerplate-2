@@ -4,4 +4,9 @@ export type Post = {
   description: string
   date: string
   slug: string
+  content?: string
+}
+
+export type PostData = Post & {
+  content: string
 }

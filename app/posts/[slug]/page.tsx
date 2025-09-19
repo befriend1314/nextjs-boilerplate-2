@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { getPostData, getAllPostSlugs } from '../../lib/posts'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from "next/link"
+import { PostData } from '../../types/post'
 
 // 生成静态参数
 export async function generateStaticParams() {
@@ -12,7 +13,7 @@ export async function generateStaticParams() {
 // 生成元数据
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
-    const post = await getPostData(params.slug)
+    const post = await getPostData(params.slug) as PostData
     
     return {
       title: post.title,
