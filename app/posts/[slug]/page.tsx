@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function Post({ params }: { params: { slug: string } }) {
   let post
   try {
-    post = await getPostData(params.slug)
+    post = await getPostData(params.slug) as PostData
   } catch (error) {
     notFound()
   }
@@ -87,7 +87,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
           </header>
           
           <div className="border-t pt-8 prose prose-lg dark:prose-invert max-w-none">
-            {/* @ts-expect-error Server Component */}
             <MDXRemote source={post.content} />
           </div>
         </article>
