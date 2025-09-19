@@ -1,8 +1,38 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <nav className="w-full max-w-5xl mx-auto py-4">
+        <ul className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm md:text-base">
+          <li>
+            <Link 
+              href="/cases" 
+              className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white transition-colors duration-200 font-medium py-2 px-1 border-b-2 border-transparent hover:border-gray-300"
+            >
+              案例
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/about" 
+              className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white transition-colors duration-200 font-medium py-2 px-1 border-b-2 border-transparent hover:border-gray-300"
+            >
+              关于我们
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/contact" 
+              className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white transition-colors duration-200 font-medium py-2 px-1 border-b-2 border-transparent hover:border-gray-300"
+            >
+              联系方式
+            </Link>
+          </li>
+        </ul>
+      </nav>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -12,7 +42,6 @@ export default function Home() {
           height={38}
           priority
         />
-        <p>婷婷你好，什么时候请我吃饭</p>
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
