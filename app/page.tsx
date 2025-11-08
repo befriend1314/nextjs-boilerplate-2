@@ -22,12 +22,12 @@ export default function Home() {
             >
               首页
             </Link>
-            <Link
+            {/* <Link
               href="/cases"
               className="font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"
             >
               成功案例
-            </Link>
+            </Link> */}
             <Link
               href="/about"
               className="font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"
@@ -58,17 +58,12 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="/contact"
+              href="/intro"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors font-medium text-lg text-center"
             >
-              立即咨询
+              出款须知前请看这里
             </a>
-            <a
-              href="#contact"
-              className="border border-gray-300 hover:border-blue-600 text-gray-700 dark:text-gray-300 dark:border-gray-600 dark:hover:border-blue-400 px-8 py-3 rounded-lg transition-colors font-medium text-lg text-center"
-            >
-              了解更多
-            </a>
+
           </div>
         </section>
 
@@ -164,7 +159,7 @@ export default function Home() {
               </div>
               <h3 className="font-semibold mb-2">联系咨询</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                通过电话或QQ联系我们，说明您的情况
+                通过微信或QQ联系我们，说明您的情况
               </p>
             </div>
 
@@ -204,7 +199,7 @@ export default function Home() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white text-center mb-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">10+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">10年+</div>
               <div className="text-sm md:text-base">行业经验</div>
             </div>
             <div>
@@ -317,14 +312,14 @@ export default function Home() {
                     首页
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/cases"
                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     成功案例
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="/about"
